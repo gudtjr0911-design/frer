@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파트너물류 - 신뢰할 수 있는 물류 비즈니스 파트너</title>
+    
+    <!-- SEO 검색엔진 최적화 메타 태그 -->
+    <meta name="description" content="대한민국 1등 스마트 물류 파트너물류. 1톤, 2.5톤, 5톤 맞춤 화물 운송, 3PL 및 풀필먼트 서비스 전문 안내.">
+    <meta name="keywords" content="파트너물류, 화물 운송, 1톤 트럭, 2.5톤 트럭, 5톤 윙바디, 물류 대행, 3PL, 풀필먼트">
+    <meta name="author" content="주식회사 파트너물류">
+    
+    <!-- 오픈 그래프 (카카오톡, 네이버 블로그 공유 시 미리보기 카드 디자인 최적화) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="파트너물류 - 신뢰할 수 있는 물류 비즈니스 파트너">
+    <meta property="og:description" content="전국 1톤, 2.5톤, 5톤 차종별 스마트 화물 배차 및 신속 정시 배송 서비스 제공.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://partner-logistics.github.io">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 아이콘 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 구글 폰트: Pretendard 대체용 Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        /* 커스텀 스크롤바 디자인 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+<!-- 네비게이션 바 -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- 로고 -->
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="bg-blue-600 text-white p-2 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:bg-blue-700 transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <span class="text-2xl font-black tracking-tight text-slate-900">파트너<span class="text-blue-600">물류</span></span>
+            </a>
+
+            <!-- 데스크톱 네비게이션 -->
+            <nav class="hidden md:flex space-x-8 lg:space-x-12">
+                <a href="#about" class="text-slate-600 hover:text-blue-600 font-semibold transition-colors duration-200 text-[15px] py-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300">회사소개</a>
+                <a href="#services" class="text-slate-600 hover:text-blue-600 font-semibold transition-colors duration-200 text-[15px] py-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300">업무설명</a>
+                <a href="#careers" class="text-slate-600 hover:text-blue-600 font-semibold transition-colors duration-200 text-[15px] py-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300">지원하기</a>
+                <a href="#contact" class="text-slate-600 hover:text-blue-600 font-semibold transition-colors duration-200 text-[15px] py-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all after:duration-300">문의하기</a>
+            </nav>
+
+            <!-- 데스크톱 우측 버튼 -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#careers" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 text-sm">
+                    인재 채용중 <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+
+            <!-- 모바일 토글 버튼 -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-blue-600 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500/20 rounded-lg">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 모바일 드롭다운 메뉴 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-2 shadow-lg transition-all duration-300 ease-in-out">
+        <a href="#about" class="block py-3 px-4 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">회사소개</a>
+        <a href="#services" class="block py-3 px-4 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">업무설명</a>
+        <a href="#careers" class="block py-3 px-4 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">지원하기</a>
+        <a href="#contact" class="block py-3 px-4 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">문의하기</a>
+        <div class="pt-4 border-t border-slate-100 flex flex-col space-y-2 px-4">
+            <a href="#careers" class="text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow-md transition-all">인재 채용 지원하기</a>
+        </div>
+    </div>
+</header>
+
+<!-- 메인 히어로 섹션 -->
+<section id="hero" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white">
+    <!-- 배경 추상화 요소 -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent opacity-70"></div>
+    <div class="absolute inset-y-0 right-0 w-1/2 bg-[url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center mix-blend-overlay opacity-20 hidden lg:block"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:w-2/3 space-y-6 md:space-y-8">
+            <div class="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-400/30 px-4 py-1.5 rounded-full text-blue-300 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-sm">
+                <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>대한민국 1등 스마트 물류를 향해 달립니다</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.2] sm:leading-[1.15]">
+                세계를 연결하는<br>
+                신뢰의 스마트 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">물류 파트너</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
+                정밀한 운송 네트워크와 최신 스마트 자동화 기술력을 바탕으로, 고객님의 화물을 전국 어디서나 가장 안전하고 신속하게 연결합니다.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                <a href="#services" class="text-center bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5">
+                    업무설명 알아보기 <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#careers" class="text-center bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-md transition-all duration-300 transform hover:-translate-y-0.5">
+                    파트너로 지원하기
+                </a>
+            </div>
+
+            <!-- 신뢰성 지표 카운터 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-slate-700/50">
+                <div class="space-y-1">
+                    <p class="text-sm text-slate-400">연간 물동량</p>
+                    <div class="flex items-baseline space-x-0.5">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-blue-400" data-target="15000000">1,500</span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-300">톤 +</span>
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-sm text-slate-400">운송 정시율</p>
+                    <div class="flex items-baseline space-x-0.5">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400" data-target="999">99.9</span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-300">%</span>
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-sm text-slate-400">네트워크 인프라</p>
+                    <div class="flex items-baseline space-x-0.5">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-blue-400" data-target="120">120</span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-300">곳 +</span>
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-sm text-slate-400">보유 차량 대수</p>
+                    <div class="flex items-baseline space-x-0.5">
+                        <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400" data-target="850">850</span>
+                        <span class="text-xs sm:text-sm font-bold text-slate-300">대 +</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 회사소개 (About Us) -->
+<section id="about" class="py-20 md:py-28 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-blue-600 font-extrabold tracking-widest text-sm uppercase">About Partner Logistics</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">당사의 핵심 비전과 가치</h2>
+            <p class="text-slate-500 text-lg leading-relaxed">
+                단순히 짐을 옮기는 것을 넘어, 파트너물류는 비즈니스의 시작과 끝을 함께 고민하는 가장 든든한 상생형 물류 얼라이언스 파트너입니다.
+            </p>
+        </div>
+
+        <!-- 회사소개 메인 그리드 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+            <!-- 이미지 영역 -->
+            <div class="lg:col-span-5 relative group">
+                <div class="absolute inset-0 bg-blue-600 rounded-3xl transform rotate-3 scale-[1.02] opacity-10 group-hover:rotate-1 transition-transform duration-500"></div>
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="물류 창고 시스템" class="rounded-3xl shadow-xl border border-slate-100 object-cover w-full h-[400px] sm:h-[480px] relative z-10 hover:shadow-2xl transition-shadow duration-500" onerror="this.src='https://placehold.co/800x800/2563EB/FFFFFF?text=Partner+Logistics'">
+            </div>
+
+            <!-- 내용 영역 -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">고객 비즈니스의 경쟁력을 강화하는 물류 기술의 혁신</h3>
+                    <p class="text-slate-600 leading-relaxed text-base sm:text-lg">
+                        파트너물류는 2015년 설립 이래, 전국적인 육상 운송 허브망과 첨단 풀필먼트 센터를 통합 구축해 왔습니다. 친환경 운송 수단의 점진적 도입과 지능형 AI 배차 알고리즘 기술을 통해 유통 관리의 비효율성을 극대화하여 해결하고 있습니다.
+                    </p>
+                </div>
+
+                <!-- 4대 핵심 가치 그리드 -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- 가치 1 -->
+                    <div class="flex space-x-4 p-5 rounded-2xl bg-slate-50 border border-slate-100/80 hover:bg-white hover:shadow-lg hover:shadow-slate-100 hover:border-blue-200 transition-all duration-300">
+                        <div class="flex-shrink-0 bg-blue-50 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg">01</div>
+                        <div class="space-y-1">
+                            <h4 class="font-bold text-slate-900">절대적 신뢰 (Trust)</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">약속한 인도 시간을 100% 준수하여 기업의 신뢰도를 지킵니다.</p>
+                        </div>
+                    </div>
+                    <!-- 가치 2 -->
+                    <div class="flex space-x-4 p-5 rounded-2xl bg-slate-50 border border-slate-100/80 hover:bg-white hover:shadow-lg hover:shadow-slate-100 hover:border-blue-200 transition-all duration-300">
+                        <div class="flex-shrink-0 bg-blue-50 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg">02</div>
+                        <div class="space-y-1">
+                            <h4 class="font-bold text-slate-900">지능적 신속 (Speed)</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">자체 경로 탐색 AI로 막힘 없는 정시 배차를 약속합니다.</p>
+                        </div>
+                    </div>
+                    <!-- 가치 3 -->
+                    <div class="flex space-x-4 p-5 rounded-2xl bg-slate-50 border border-slate-100/80 hover:bg-white hover:shadow-lg hover:shadow-slate-100 hover:border-blue-200 transition-all duration-300">
+                        <div class="flex-shrink-0 bg-blue-50 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg">03</div>
+                        <div class="space-y-1">
+                            <h4 class="font-bold text-slate-900">안전 최우선 (Safety)</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">적재물 배상 및 실시간 관제로 파손 제로에 도전합니다.</p>
+                        </div>
+                    </div>
+                    <!-- 가치 4 -->
+                    <div class="flex space-x-4 p-5 rounded-2xl bg-slate-50 border border-slate-100/80 hover:bg-white hover:shadow-lg hover:shadow-slate-100 hover:border-blue-200 transition-all duration-300">
+                        <div class="flex-shrink-0 bg-blue-50 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg">04</div>
+                        <div class="space-y-1">
+                            <h4 class="font-bold text-slate-900">동반 성장 (Partnership)</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">가장 합리적인 단가를 제안하여 물류비 부담을 덜어드립니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 업무설명 (Services) -->
+<section id="services" class="py-20 md:py-28 bg-slate-50 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-blue-600 font-extrabold tracking-widest text-sm uppercase">Fleet & Operations</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">맞춤 배차 차종별 업무 시스템</h2>
+            <p class="text-slate-500 text-lg leading-relaxed">
+                도심지 신속 배송부터 전국 단위 간선 수송까지, 가장 최적화된 차량 매칭을 통해 완벽한 정시 적재율을 보장합니다.
+            </p>
+        </div>
+
+        <!-- 업무 카테고리 카드 그리드 (3열 구조 변경) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- 업무 1 (1톤 차량) -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-md hover:shadow-2xl hover:border-blue-500/20 group transition-all duration-300 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516575150278-77136aed6920?auto=format&fit=crop&w=500&q=80" alt="1톤 소형 화물 차량" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x300/1E3A8A/FFFFFF?text=1-Ton+Delivery'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1톤 차량</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">1톤 신속 소형 화물 운송</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            좁은 골목길과 복잡한 도심지 어디든 원활한 진입이 가능한 기동력을 가집니다. 라스트마일 배송, 쇼핑몰 당일 출고, 긴급 퀵 수송에 특화된 스마트 시티 물류입니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openServiceDetail('ton1')" class="text-slate-900 font-bold text-sm inline-flex items-center group-hover:text-blue-600 transition-colors">
+                        상세보기 <i class="fa-solid fa-angle-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 업무 2 (2.5톤 차량) -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-md hover:shadow-2xl hover:border-blue-500/20 group transition-all duration-300 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=500&q=80" alt="2.5톤 중형 화물 차량" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x300/1E3A8A/FFFFFF?text=2.5-Ton+Cargo'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">2.5톤 차량</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">2.5톤 중형 비즈니스 운송</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            1톤으로는 부족하고 5톤은 무거운 기업 화물에 최적인 중간 차종입니다. 대리점 순회 배송, 대형 프랜차이즈 식자재 납품 및 중형 원자재 수송에 있어 가장 가성비 높은 선택지입니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openServiceDetail('ton2_5')" class="text-slate-900 font-bold text-sm inline-flex items-center group-hover:text-blue-600 transition-colors">
+                        상세보기 <i class="fa-solid fa-angle-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 업무 3 (5톤 차량) -->
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-md hover:shadow-2xl hover:border-blue-500/20 group transition-all duration-300 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-56 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" alt="5톤 대형 화물 차량" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x300/1E3A8A/FFFFFF?text=5-Ton+Wingbody'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 bg-amber-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">5톤 차량</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">5톤 이상 대형 윙바디 광역 수송</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            전국 주요 거점의 물류 허브 터미널 간 대용량 간선 수송을 담당합니다. 지게차 상하차가 용이한 전동식 윙바디 구조로, 팰릿 단위 대량 기업 화물 및 중공업 원자재 이동에 탁월합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="openServiceDetail('ton5')" class="text-slate-900 font-bold text-sm inline-flex items-center group-hover:text-blue-600 transition-colors">
+                        상세보기 <i class="fa-solid fa-angle-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 지원하기 (Careers / Apply) -->
+<section id="careers" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-blue-600 font-extrabold tracking-widest text-sm uppercase">Join Our Team</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">당사와 성장할 파트너를 찾습니다</h2>
+            <p class="text-slate-500 text-lg leading-relaxed">
+                파트너물류의 내일을 혁신할 소중한 구성원과 상생 파트너를 상시 모집합니다. 당신의 무한한 가능성을 당사와 함께 실현해 가세요.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- 왼쪽: 모집 분야 리스트 -->
+            <div class="lg:col-span-5 space-y-6">
+                <h3 class="text-2xl font-bold text-slate-900 mb-2 flex items-center">
+                    <i class="fa-solid fa-clipboard-list text-blue-600 mr-3"></i>현재 진행 중인 채용 공고
+                </h3>
+                <p class="text-slate-500 text-sm">해당 분야를 선택하시거나, 아래 지원 양식을 작성해 주세요.</p>
+
+                <!-- 공고 카드 1 -->
+                <div onclick="selectPosition('대형 간선 운송 파트너 기사')" class="cursor-pointer border border-blue-100 hover:border-blue-500 bg-blue-50/30 p-5 rounded-2xl flex justify-between items-center transition-all group hover:shadow-md">
+                    <div class="space-y-2">
+                        <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">정규 / 상시모집</span>
+                        <h4 class="font-bold text-slate-800 text-base md:text-lg group-hover:text-blue-600 transition-colors">대형 간선 운송 파트너 기사</h4>
+                        <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>전국 허브 센터 센터순환</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+
+                <!-- 공고 카드 2 -->
+                <div onclick="selectPosition('스마트 풀필먼트 센터 관리직')" class="cursor-pointer border border-slate-100 hover:border-blue-500 bg-white p-5 rounded-2xl flex justify-between items-center transition-all group hover:shadow-md">
+                    <div class="space-y-2">
+                        <span class="bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">신입 및 경력</span>
+                        <h4 class="font-bold text-slate-800 text-base md:text-lg group-hover:text-blue-600 transition-colors">스마트 풀필먼트 센터 관리직</h4>
+                        <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>경기 여주 / 남양주 센터</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+
+                <!-- 공고 카드 3 -->
+                <div onclick="selectPosition('물류 기술 솔루션 개발자')" class="cursor-pointer border border-slate-100 hover:border-blue-500 bg-white p-5 rounded-2xl flex justify-between items-center transition-all group hover:shadow-md">
+                    <div class="space-y-2">
+                        <span class="bg-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">경력</span>
+                        <h4 class="font-bold text-slate-800 text-base md:text-lg group-hover:text-blue-600 transition-colors">물류 IT 플랫폼 소프트웨어 엔지니어</h4>
+                        <p class="text-xs text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i>서울 본사 (재택 병행 가능)</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </div>
+
+            <!-- 오른쪽: 지원서 입력을 위한 인터랙티브 폼 -->
+            <div class="lg:col-span-7 bg-slate-50 border border-slate-100 rounded-3xl p-6 sm:p-10 shadow-lg">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-slate-900">간편 지원하기</h3>
+                    <p class="text-slate-500 text-sm mt-1">이력서를 등록해 주시면 담당자가 검토 후 영업일 3일 이내에 개별 연락해 드립니다.</p>
+                </div>
+
+                <form id="recruitment-form" class="space-y-6" onsubmit="handleRecruitmentSubmit(event)">
+                    <!-- 이름 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">성함 <span class="text-rose-500">*</span></label>
+                        <input type="text" id="app-name" required placeholder="성함을 입력해 주세요." class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm">
+                    </div>
+
+                    <!-- 연락처 & 이메일 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">연락처 <span class="text-rose-500">*</span></label>
+                            <input type="tel" id="app-phone" required placeholder="010-0000-0000" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">이메일 주소 <span class="text-rose-500">*</span></label>
+                            <input type="email" id="app-email" required placeholder="example@partner.com" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm">
+                        </div>
+                    </div>
+
+                    <!-- 지원 희망 분야 선택 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">지원 직군 <span class="text-rose-500">*</span></label>
+                        <select id="app-position" required class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm text-slate-600">
+                            <option value="">지원 분야를 선택하세요</option>
+                            <option value="대형 간선 운송 파트너 기사">대형 간선 운송 파트너 기사</option>
+                            <option value="스마트 풀필먼트 센터 관리직">스마트 풀필먼트 센터 관리직</option>
+                            <option value="물류 기술 솔루션 개발자">물류 IT 플랫폼 소프트웨어 엔지니어</option>
+                            <option value="기타 일반 업무 지원">기타 일반 행정 및 물류 사무</option>
+                        </select>
+                    </div>
+
+                    <!-- 자기소개 및 주요 경력 기술 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">자기소개 및 주요 경력 기술 <span class="text-rose-500">*</span></label>
+                        <textarea id="app-intro" rows="5" required placeholder="간단한 자기소개나 운송 면허 소지 여부, 주요 물류 경력 사항 등을 상세히 남겨주시면 채용 심사에 유용하게 사용됩니다." class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm leading-relaxed"></textarea>
+                    </div>
+
+                    <!-- 파일 업로드 비주얼 구현 -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">이력서 및 포트폴리오 첨부 (선택)</label>
+                        <div class="border-2 border-dashed border-slate-200 bg-white hover:border-blue-500 transition-colors rounded-2xl p-6 text-center cursor-pointer relative group">
+                            <input type="file" id="app-file" class="absolute inset-0 opacity-0 cursor-pointer" onchange="handleFileChange(this)">
+                            <div class="space-y-2">
+                                <i class="fa-solid fa-cloud-arrow-up text-3xl text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                                <p class="text-sm font-bold text-slate-600" id="file-label-text">이력서 파일을 마우스로 끌어오거나 클릭하세요.</p>
+                                <p class="text-xs text-slate-400">PDF, WORD, HWP, ZIP 파일 형식만 지원 (최대 20MB)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 개인정보 수집 동의 -->
+                    <div class="flex items-start space-x-3 pt-2">
+                        <input type="checkbox" id="app-agreement" required class="mt-1 h-4.5 w-4.5 text-blue-600 focus:ring-blue-500/20 border-slate-200 rounded">
+                        <label for="app-agreement" class="text-xs text-slate-500 leading-normal select-none">
+                            채용 지원서 검토를 위해 파트너물류가 개인정보 수집 및 처리 지침에 따라 본인의 정보를 수집 및 이용하는 것에 전적으로 동의합니다. <span class="text-rose-500 font-bold">(필수)</span>
+                        </label>
+                    </div>
+
+                    <!-- 제출 버튼 -->
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 transition-all duration-300">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> 지원서 최종 등록하기
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 고객문의 & 회사 위치 (Contact Us) -->
+<section id="contact" class="py-20 md:py-28 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent opacity-80"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- 섹션 헤더 -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-blue-400 font-extrabold tracking-widest text-sm uppercase">Quick Contact</span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">신속 물류 단가 및 맞춤 업무 상담</h2>
+            <p class="text-slate-400 text-lg leading-relaxed">
+                궁금한 부분이 있으신가요? 빠르고 상세하게 안내해 드리겠습니다.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- 문의 정보 & 지도 -->
+            <div class="lg:col-span-5 space-y-8">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold">전국 고객 감동 콜센터</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        온라인 문의 주시면 최적의 전담 관리자가 매칭되어 최저 물류 운송 설계 단가를 안내해 드립니다.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-500/20 text-blue-400 p-3.5 rounded-xl"><i class="fa-solid fa-phone text-lg"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400">대표 전화</p>
+                                <p class="text-lg font-bold">1588-4224</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-500/20 text-blue-400 p-3.5 rounded-xl"><i class="fa-solid fa-envelope text-lg"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400">비즈니스 이메일</p>
+                                <p class="text-lg font-bold">partner-logis@partner.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-500/20 text-blue-400 p-3.5 rounded-xl"><i class="fa-solid fa-location-dot text-lg"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400">본사 및 통합 허브</p>
+                                <p class="text-base font-bold">서울특별시 강남구 테헤란로 422, 메트로타워 18층</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 지도 영역 프리뷰 -->
+                <div class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950/80 p-1">
+                    <!-- 실제 API 지도 대신 깔끔한 SVG/CSS 맵 뷰 대체 레이아웃 -->
+                    <div class="bg-slate-900 h-64 relative flex flex-col items-center justify-center p-6 text-center">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-10"></div>
+                        <div class="z-10 space-y-4">
+                            <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto shadow-lg shadow-blue-500/50 animate-bounce">
+                                <i class="fa-solid fa-location-crosshairs text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">파트너물류 서울 종합본사</h4>
+                                <p class="text-xs text-slate-400 mt-1">지하철 2호선 선릉역 1번 출구 도보 3분</p>
+                            </div>
+                            <button onclick="window.open('https://map.kakao.com', '_blank')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-all border border-slate-700">
+                                <i class="fa-solid fa-map mr-1"></i> 카카오맵으로 위치 보기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 고객 문의 작성 폼 -->
+            <div class="lg:col-span-7 bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-10 backdrop-blur-md">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fa-regular fa-comment-dots text-blue-400 mr-3"></i>실시간 비즈니스 제안 및 문의
+                </h3>
+                <form id="contact-form" class="space-y-6" onsubmit="handleContactSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">고객명 / 회사명 <span class="text-rose-400">*</span></label>
+                            <input type="text" id="contact-name" required placeholder="예시) 주식회사 파트너 상사" class="w-full px-4 py-3 bg-slate-850 border border-slate-700/50 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 bg-slate-950/20 outline-none text-slate-100 transition-all text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">회신용 이메일 <span class="text-rose-400">*</span></label>
+                            <input type="email" id="contact-email" required placeholder="partner@company.com" class="w-full px-4 py-3 bg-slate-850 border border-slate-700/50 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 bg-slate-950/20 outline-none text-slate-100 transition-all text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">문의 유형 <span class="text-rose-400">*</span></label>
+                        <select id="contact-type" required class="w-full px-4 py-3 bg-slate-850 border border-slate-700/50 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 bg-slate-900 outline-none text-slate-100 transition-all text-sm">
+                            <option value="">문의하실 종류를 선택해 주세요</option>
+                            <option value="운송 대행 견적 요청">전국 정기 운송 대행 단가 견적</option>
+                            <option value="3PL 및 창고 보관 문의">3PL 풀필먼트 및 물류 창고 장기 보관 문의</option>
+                            <option value="글로벌 포워딩 상담">해외 통관 및 수출입 포워딩</option>
+                            <option value="기타 제휴 제안">단순 비즈니스 제휴 제안</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">상세 문의 내용 <span class="text-rose-400">*</span></label>
+                        <textarea id="contact-message" rows="5" required placeholder="효율적인 물동량 설계 및 맞춤형 견적 제안을 원하시면 대략적인 보관 상품의 종류, 물량, 발송 주기를 함께 명시해 주시면 매우 신속하게 상담 가능합니다." class="w-full px-4 py-3 bg-slate-850 border border-slate-700/50 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 bg-slate-950/20 outline-none text-slate-100 transition-all text-sm leading-relaxed"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all duration-300">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> 맞춤 상담 문의 등록하기
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 푸터 영역 -->
+<footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start mb-12">
+            <!-- 회사 로고 및 설명 -->
+            <div class="md:col-span-5 space-y-4">
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="bg-blue-600 text-white p-1.5 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-white">파트너<span class="text-blue-500">물류</span></span>
+                </a>
+                <p class="text-sm leading-relaxed text-slate-500">
+                    최첨단 스마트 물류 기술을 통해 전국 유통 물류망을 최적화하고 기업 비즈니스의 비용 가치를 보증하는 핵심 가치 실현 파트너입니다.
+                </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all"><i class="fa-solid fa-blog"></i></a>
+                </div>
+            </div>
+
+            <!-- 네비게이션 링크들 -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="text-white font-bold text-sm tracking-widest uppercase">메뉴 리스트</h4>
+                <div class="flex flex-col space-y-2.5 text-sm">
+                    <a href="#about" class="hover:text-blue-500 transition-colors">회사소개</a>
+                    <a href="#services" class="hover:text-blue-500 transition-colors">업무 설명</a>
+                    <a href="#careers" class="hover:text-blue-500 transition-colors">인재 영입 및 지원</a>
+                    <a href="#contact" class="hover:text-blue-500 transition-colors">자주 묻는 질문</a>
+                </div>
+            </div>
+
+            <!-- 기타 법적 고지사항 -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="text-white font-bold text-sm tracking-widest uppercase font-semibold">파트너물류 공식 정보</h4>
+                <div class="space-y-2 text-xs text-slate-500 leading-relaxed">
+                    <p>상호명: 주식회사 파트너물류 | 대표이사: 홍길동</p>
+                    <p>사업자 등록 번호: 120-00-00000 | 통신판매신고번호: 제2026-서울강남-0000호</p>
+                    <p>개인정보 보증 관리 책임자: 이몽룡 (contact@partner.com)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
+            <p>&copy; <span id="current-year">2026</span> 파트너물류 주식회사. All Rights Reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" onclick="openTermsModal('privacy')" class="hover:text-slate-300 transition-colors font-bold">개인정보 처리방침</a>
+                <a href="#" onclick="openTermsModal('use')" class="hover:text-slate-300 transition-colors">이용 약관</a>
+                <a href="#" onclick="openTermsModal('refuse')" class="hover:text-slate-300 transition-colors">이메일 무단 수집 거부</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- 모달 팝업 1: 업무별 상세보기 -->
+<div id="service-detail-modal" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-slate-950/70 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 transform scale-95 transition-transform duration-300">
+        <!-- 모달 헤더 -->
+        <div class="relative h-44 flex items-end p-6 bg-blue-600 text-white">
+            <div class="absolute inset-0 bg-slate-950/20"></div>
+            <!-- 배경 이미지 데코레이션 -->
+            <div id="modal-service-bg" class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-35"></div>
+            <button onclick="closeServiceDetail()" class="absolute top-4 right-4 text-white bg-white/20 hover:bg-white/30 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="relative z-10">
+                <span id="modal-service-tag" class="bg-white/20 text-[10px] font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">상세안내</span>
+                <h3 id="modal-service-title" class="text-2xl font-bold mt-2">정밀 육상 배송</h3>
+            </div>
+        </div>
+        <!-- 모달 컨텐츠 -->
+        <div class="p-6 sm:p-8 space-y-4">
+            <p id="modal-service-desc" class="text-slate-600 text-[15px] leading-relaxed">
+                설명 텍스트입니다.
+            </p>
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                <h4 class="font-bold text-slate-800 text-sm mb-2"><i class="fa-solid fa-circle-check text-blue-600 mr-2"></i>최상의 특장점</h4>
+                <ul id="modal-service-features" class="space-y-1.5 text-xs text-slate-600">
+                    <!-- 상세 특장점 채워짐 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 모달 하단 버튼 -->
+        <div class="p-6 border-t border-slate-100 flex justify-end space-x-3 bg-slate-50">
+            <button onclick="closeServiceDetail()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-5 py-2.5 rounded-xl text-xs transition-all">
+                닫기
+            </button>
+            <a href="#contact" onclick="closeServiceDetail()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition-all">
+                업무 제안/견적 의뢰하기
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 모달 팝업 2: 상태 알림 및 확인 (Alert 대체안) -->
+<div id="status-alert-modal" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-slate-950/70 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl border border-slate-100 transform scale-95 transition-transform duration-300">
+        <div id="status-icon-container" class="mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-emerald-100 text-emerald-600 text-2xl">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3 id="status-title" class="text-lg font-bold text-slate-900 mb-2">신청 완료</h3>
+        <p id="status-desc" class="text-slate-500 text-sm leading-relaxed mb-6">성공적으로 등록되었습니다.</p>
+        <button onclick="closeStatusAlert()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-sm transition-colors">
+            확인
+        </button>
+    </div>
+</div>
+
+<script>
+    // 현재 년도 표시
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // 모바일 메뉴 제어 토글
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-2xl"></i>';
+        } else {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark text-2xl"></i>';
+        }
+    });
+
+    // 모든 링크 클릭 시 부드럽게 스크롤 & 모바일 메뉴 닫기
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // 스크롤 위치 보정 (헤더 높이 고려)
+                const headerHeight = document.getElementById('navbar').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+
+                // 모바일 메뉴 닫기
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars text-2xl"></i>';
+            }
+        });
+    });
+
+    // 스크롤 상태에 따른 네비게이션 효과
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 20) {
+            navbar.classList.add('shadow-md', 'py-1');
+            navbar.classList.remove('shadow-sm', 'py-0');
+        } else {
+            navbar.classList.add('shadow-sm');
+            navbar.classList.remove('shadow-md');
+        }
+    });
+
+    // 채용 리스트 클릭 시, 지원분야 선택 연동
+    function selectPosition(positionName) {
+        const selectElement = document.getElementById('app-position');
+        selectElement.value = positionName;
+        
+        // 지원서 양식 섹션으로 부드러운 스크롤 이동
+        const targetElement = document.getElementById('recruitment-form');
+        const headerHeight = document.getElementById('navbar').offsetHeight;
+        const offsetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 30;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        // 애니메이션 포커싱 효과
+        selectElement.classList.add('ring-4', 'ring-blue-500/20');
+        setTimeout(() => {
+            selectElement.classList.remove('ring-4', 'ring-blue-500/20');
+        }, 1500);
+    }
+
+    // 파일 등록 레이블 동적 변경
+    function handleFileChange(input) {
+        const labelText = document.getElementById('file-label-text');
+        if (input.files.length > 0) {
+            labelText.textContent = `선택된 파일: ${input.files[0].name}`;
+            labelText.classList.add('text-blue-600');
+        } else {
+            labelText.textContent = '이력서 파일을 마우스로 끌어오거나 클릭하세요.';
+            labelText.classList.remove('text-blue-600');
+        }
+    }
+
+    // 커스텀 모달 알림창 표시 함수
+    function showStatusAlert(title, message, isSuccess = true) {
+        const modal = document.getElementById('status-alert-modal');
+        const titleEl = document.getElementById('status-title');
+        const descEl = document.getElementById('status-desc');
+        const iconContainer = document.getElementById('status-icon-container');
+
+        titleEl.textContent = title;
+        descEl.textContent = message;
+
+        if (isSuccess) {
+            iconContainer.className = "mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-emerald-100 text-emerald-600 text-2xl animate-bounce";
+            iconContainer.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        } else {
+            iconContainer.className = "mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-rose-100 text-rose-600 text-2xl animate-shake";
+            iconContainer.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+        }
+
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+        }, 50);
+    }
+
+    function closeStatusAlert() {
+        const modal = document.getElementById('status-alert-modal');
+        modal.classList.add('opacity-0');
+        modal.querySelector('div').classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    // 채용 지원서 제출 비즈니스 로직
+    function handleRecruitmentSubmit(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('app-name').value;
+        const position = document.getElementById('app-position').value;
+        const agree = document.getElementById('app-agreement').checked;
+
+        if (!agree) {
+            showStatusAlert("동의 필요", "개인정보 수집 및 처리 약관에 동의하셔야만 지원이 진행됩니다.", false);
+            return;
+        }
+
+        // 데이터 전송 완료 시나리오 데모 피드백
+        showStatusAlert(
+            "지원서 등록 완료", 
+            `${name} 파트너님의 '${position}' 직군 채용 접수가 성공적으로 이루어졌습니다. 검토 후 신속히 기재해 주신 이메일과 번호로 연락해 드리겠습니다.`
+        );
+
+        // 양식 초기화
+        document.getElementById('recruitment-form').reset();
+        document.getElementById('file-label-text').textContent = '이력서 파일을 마우스로 끌어오거나 클릭하세요.';
+        document.getElementById('file-label-text').classList.remove('text-blue-600');
+    }
+
+    // 비즈니스 제안 및 문의 상담 등록 로직
+    function handleContactSubmit(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('contact-name').value;
+        const type = document.getElementById('contact-type').value;
+
+        // 문의 성공 가상 피드백
+        showStatusAlert(
+            "문의 사항 접수 완료", 
+            `[${name}] 고객님의 '${type}' 관련 제안 문의가 정식 접수되었습니다. 물류 전담 상담사가 검토 후 가장 빠르게 최적 제안 가이드로 회신해 드리겠습니다.`
+        );
+
+        document.getElementById('contact-form').reset();
+    }
+
+    // 서비스 상세보기 모달 데이터 딕셔너리
+    const serviceDetails = {
+        ton1: {
+            title: "1톤 신속 소형 화물 운송",
+            tag: "도심/라스트마일",
+            img: "https://images.unsplash.com/photo-1516575150278-77136aed6920?auto=format&fit=crop&w=500&q=80",
+            desc: "도심의 복잡한 제한구역 및 골목 진입을 신속하게 소화하는 1톤 탑차 및 카고 서비스입니다. 쇼핑몰 특송 배달이나 긴급 화물, 신선식품 새벽 도심 유통에 가장 최적화되어 신뢰할 수 있는 라스트마일 동반자입니다.",
+            features: [
+                "아파트, 단독주택 골목 등 좁은 이면도로 완벽 진입 배송 보장",
+                "긴급 도심 퀵 연계 및 당일 배송을 위한 24시간 도심형 거점 라우팅",
+                "소상공인 및 스타트업 맞춤식 월 단위 소형 정기 노선 고정 배차"
+            ]
+        },
+        ton2_5: {
+            title: "2.5톤 중형 비즈니스 정기 운송",
+            tag: "기업/식자재납품",
+            img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=500&q=80",
+            desc: "1톤의 용량 한계를 시원하게 해결하면서도 5톤 대형 차량에 비해 기동성과 좁은 공간 활용이 극대화된 중형 트럭 라인업입니다. 다수의 대리점이나 프랜차이즈 오프라인 매장의 일괄 다량 납품에 정밀 타겟팅된 운송 공법입니다.",
+            features: [
+                "다품종 프랜차이즈 점포 원클릭 복합 식자재 정시 정기 배송",
+                "하이탑/저상형 맞춤 차량 보유로 오피스 지하주차장 등 제약조건 극복",
+                "중거리 공장 자재, 기계 부품 등의 가장 경제적인 최적 운송 톤수 설계"
+            ]
+        },
+        ton5: {
+            title: "5톤 이상 대형 윙바디 광역 수송",
+            tag: "대형수송/기간산업",
+            img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80",
+            desc: "전국 각 메이저 거점 물류허브 간 대밀도 허브 앤 스포크(Hub & Spoke) 운송을 실행합니다. 좌우로 넓게 열리는 기계식 윙바디 탑으로 지게차 상하차에 완벽히 호환되며 다수 팰릿 적재물의 편안하고 안전한 초장거리 수송을 전담합니다.",
+            features: [
+                "고밀도 간선 정기선 주행망 구비로 지연 없는 당일 원거리 수송 체계",
+                "완벽한 적재 충격 완화 에어쇼바 및 결박 장치 부착으로 파손율 0.01% 미만",
+                "대기업 원자재 대량 공급, 중공업 원자재 및 장거리 파워 팰릿 물동량 전문 대응"
+            ]
+        }
+    };
+
+    // 업무 상세 모달 제어
+    function openServiceDetail(key) {
+        const detail = serviceDetails[key];
+        if (!detail) return;
+
+        document.getElementById('modal-service-title').textContent = detail.title;
+        document.getElementById('modal-service-tag').textContent = detail.tag;
+        document.getElementById('modal-service-desc').textContent = detail.desc;
+        document.getElementById('modal-service-bg').style.backgroundImage = `url('${detail.img}')`;
+
+        const featuresList = document.getElementById('modal-service-features');
+        featuresList.innerHTML = '';
+        detail.features.forEach(feat => {
+            const li = document.createElement('li');
+            li.innerHTML = `<i class="fa-solid fa-check text-emerald-500 mr-2"></i> ${feat}`;
+            featuresList.appendChild(li);
+        });
+
+        const modal = document.getElementById('service-detail-modal');
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+        }, 50);
+    }
+
+    // 법적 공지 팝업 가상 구현
+    function openTermsModal(type) {
+        let title = "";
+        let desc = "";
+        if (type === 'privacy') {
+            title = "개인정보 처리방침 안내";
+            desc = "주식회사 파트너물류는 회원의 개인정보를 소중히 다루며 정보통신망 이용촉진 및 정보보호 등에 관한 법률을 완전하게 준수하고 있습니다. 당사는 귀하가 채용 및 비즈니스 실시간 제안 양식을 통해 기입하신 정보들을 오직 회신용 목적으로만 사용하며 목적 달성 즉시 지체 없이 완전 영구 파쇄 처리할 것을 약속드립니다.";
+        } else if (type === 'use') {
+            title = "홈페이지 이용 약관";
+            desc = "본 약관은 파트너물류 공식 홈페이지를 이용함에 있어 발생되는 상호 간 권리 의무 및 규약 제반을 한정하는 목적으로 사용됩니다. 홈페이지의 무단 크롤링, 소스 도용 등 지식재산권 침해에 관하여 법적 조치를 수반할 수 있습니다.";
+        } else {
+            title = "이메일 무단 수집 거부";
+            desc = "당사 웹사이트에 개설된 모든 기재 이메일 주소를 스팸메일 발송 목적으로 기계나 자동화 크롤러를 이용하여 무단 수집 및 갈취하는 행위를 단호하게 전면 거부하며, 위반 행위 발생 시 법적 처벌과 고소가 이루어질 수 있습니다.";
+        }
+        showStatusAlert(title, desc);
+    }
+
+    function closeServiceDetail() {
+        const modal = document.getElementById('service-detail-modal');
+        modal.classList.add('opacity-0');
+        modal.querySelector('div').classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    // 신뢰성 지표 증가 카운팅 애니메이션 구현
+    const startCounters = () => {
+        const counters = document.querySelectorAll('[data-target]');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            let current = 0;
+            const duration = 2000; // 2초간 증가
+            const stepTime = Math.max(Math.floor(duration / (target / 10)), 20);
+
+            const timer = setInterval(() => {
+                if (target === 999) { // 퍼센트 정수 기법을 별도 처리
+                    current += 5.5;
+                    if (current >= 99.9) {
+                        counter.textContent = '99.9';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = current.toFixed(1);
+                    }
+                } else if (target === 15000000) { // 1,500만 처리
+                    current += 50;
+                    if (current >= 1500) {
+                        counter.textContent = '1,500';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = current.toLocaleString();
+                    }
+                } else {
+                    current += Math.ceil(target / 80);
+                    if (current >= target) {
+                        counter.textContent = target.toLocaleString();
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = current.toLocaleString();
+                    }
+                }
+            }, stepTime);
+        });
+    };
+
+    // 로드 시 카운팅 시작 실행
+    window.onload = function() {
+        startCounters();
+    };
+</script>
+</body>
+</html>
